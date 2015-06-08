@@ -1115,7 +1115,8 @@ var define, requireModule, require, requirejs;
   function(__dependency1__, __exports__) {
     "use strict";
     var Ember = __dependency1__["default"];
-    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+    /**/) {
     this.compilerInfo = [4,'>= 1.0.0'];
     helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
       var buffer = '', stack1, escapeExpression=this.escapeExpression, self=this;
@@ -1161,7 +1162,8 @@ var define, requireModule, require, requirejs;
   function(__dependency1__, __exports__) {
     "use strict";
     var Ember = __dependency1__["default"];
-    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+    /**/) {
     this.compilerInfo = [4,'>= 1.0.0'];
     helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
       var buffer = '', stack1, escapeExpression=this.escapeExpression, self=this;
@@ -1205,7 +1207,8 @@ var define, requireModule, require, requirejs;
   function(__dependency1__, __exports__) {
     "use strict";
     var Ember = __dependency1__["default"];
-    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+    /**/) {
     this.compilerInfo = [4,'>= 1.0.0'];
     helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
       var buffer = '', stack1, escapeExpression=this.escapeExpression, self=this;
@@ -1247,7 +1250,8 @@ var define, requireModule, require, requirejs;
   function(__dependency1__, __exports__) {
     "use strict";
     var Ember = __dependency1__["default"];
-    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+    /**/) {
     this.compilerInfo = [4,'>= 1.0.0'];
     helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
       var buffer = '', stack1, escapeExpression=this.escapeExpression;
@@ -1268,7 +1272,8 @@ var define, requireModule, require, requirejs;
   function(__dependency1__, __exports__) {
     "use strict";
     var Ember = __dependency1__["default"];
-    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+    /**/) {
     this.compilerInfo = [4,'>= 1.0.0'];
     helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
       var buffer = '', escapeExpression=this.escapeExpression;
@@ -1289,7 +1294,8 @@ var define, requireModule, require, requirejs;
   function(__dependency1__, __exports__) {
     "use strict";
     var Ember = __dependency1__["default"];
-    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+    /**/) {
     this.compilerInfo = [4,'>= 1.0.0'];
     helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
       var buffer = '', stack1, escapeExpression=this.escapeExpression, self=this;
@@ -1329,7 +1335,8 @@ var define, requireModule, require, requirejs;
   function(__dependency1__, __exports__) {
     "use strict";
     var Ember = __dependency1__["default"];
-    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+    /**/) {
     this.compilerInfo = [4,'>= 1.0.0'];
     helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
       var buffer = '', escapeExpression=this.escapeExpression;
@@ -1347,7 +1354,8 @@ var define, requireModule, require, requirejs;
   function(__dependency1__, __exports__) {
     "use strict";
     var Ember = __dependency1__["default"];
-    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+    /**/) {
     this.compilerInfo = [4,'>= 1.0.0'];
     helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
       var buffer = '', stack1;
@@ -1366,7 +1374,8 @@ var define, requireModule, require, requirejs;
   function(__dependency1__, __exports__) {
     "use strict";
     var Ember = __dependency1__["default"];
-    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+    /**/) {
     this.compilerInfo = [4,'>= 1.0.0'];
     helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
       var buffer = '', escapeExpression=this.escapeExpression;
@@ -1686,13 +1695,20 @@ var define, requireModule, require, requirejs;
       elementSizeDidChange: function() {
         var maxHeight = 0;
         // TODO(Louis): This seems bad...
-        Ember.$('.ember-table-header-block .ember-table-content').each(function() {
+        Ember.$('.js-pivot-columns .ember-table-content').each(function() {
           var thisHeight = Ember.$(this).outerHeight();
           if (thisHeight > maxHeight) {
             maxHeight = thisHeight;
           }
         });
-        this.set('tableComponent._contentHeaderHeight', maxHeight);
+        var maxHeight2 = 0;
+        Ember.$('.js-non-pivot-columns .ember-table-content').each(function() {
+          var thisHeight = Ember.$(this).outerHeight();
+          if (thisHeight > maxHeight2) {
+            maxHeight2 = thisHeight;
+          }
+        });
+        this.set('tableComponent._contentHeaderHeight', maxHeight + maxHeight2);
       },
 
       cellWidthDidChange: Ember.observer(function() {
