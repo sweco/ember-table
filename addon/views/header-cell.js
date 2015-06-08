@@ -119,13 +119,20 @@ StyleBindingsMixin, RegisterTableComponentMixin, {
   elementSizeDidChange: function() {
     var maxHeight = 0;
     // TODO(Louis): This seems bad...
-    Ember.$('.ember-table-header-block .ember-table-content').each(function() {
+    Ember.$('.js-pivot-columns .ember-table-content').each(function() {
       var thisHeight = Ember.$(this).outerHeight();
       if (thisHeight > maxHeight) {
         maxHeight = thisHeight;
       }
     });
-    this.set('tableComponent._contentHeaderHeight', maxHeight);
+    var maxHeight2 = 0;
+    Ember.$('.js-non-pivot-columns .ember-table-content').each(function() {
+      var thisHeight = Ember.$(this).outerHeight();
+      if (thisHeight > maxHeight2) {
+        maxHeight2 = thisHeight;
+      }
+    });
+    this.set('tableComponent._contentHeaderHeight', maxHeight + maxHeight2);
   },
 
   cellWidthDidChange: Ember.observer(function() {
