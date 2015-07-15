@@ -13,13 +13,13 @@ export default Ember.Controller.extend({
   // now we need this to make the demo work.
   demoTableWidth: null,
 
-  columnMode: function() {
+  columnMode: Ember.computed(function() {
     if (this.get('isFluid')) {
       return 'fluid';
     } else {
       return 'standard';
     }
-  }.property('isFluid'),
+  }).property('isFluid'),
 
   updateDemoTableWidth: function(newWidth) {
     this.set('demoTableWidth', newWidth);
