@@ -14,6 +14,9 @@ export default TableBlock.extend({
   onColumnsDidChange: Ember.observer(function() {
     var _this = this;
     Ember.run.schedule('afterRender', function() {
+      if ((this.get('_state') || this.get('state')) !== 'inDOM') {
+        return;
+      }
       _this.$().scrollLeft(_this.get('scrollLeft'));
     });
   }, 'content')
