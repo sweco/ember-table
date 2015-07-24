@@ -9,6 +9,7 @@ StyleBindingsMixin, {
   createChildView: function(view, attrs) {
     var itemViewClassField = this.get('itemViewClassField');
     var itemViewClass = attrs.content.get(itemViewClassField);
+    console.log('itemViewClassField',itemViewClassField, 'itemViewClass', itemViewClass);
     if (typeof itemViewClass === 'string') {
       if (/[A-Z]+/.exec(itemViewClass)) {
         // Global var lookup - 'App.MessagePreviewView'
