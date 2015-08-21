@@ -20,6 +20,7 @@ Router.map(function() {
   this.route('horizon');
   this.route('configurable-columns');
   this.route('removable-columns');
+  this.route('sg-treetable');
 
   this.route('community-examples');
 
