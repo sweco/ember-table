@@ -88,7 +88,7 @@ export default TableComponent.extend({
 
   bodyContent: Ember.computed('_rows.@each.isShowing', function() {
     var rows = this.get('_rows');
-    rows = (rows ? rows.filterBy('isShowing') : Ember.A())
+    rows = (rows ? rows.filterBy('isShowing') : Ember.A());
     rows.forEach(function(row, index) {
       return row.set('itemIndex', index);
     });
