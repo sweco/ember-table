@@ -22,29 +22,6 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-
-    /*
-     * Dummy app configuration for ember-cli-content-security-policy.
-     *
-     * TODO(azirbel): CSP "unsafe" inline styles seem to be used for table rows
-     * somehow, I haven't tracked it down. This is probably ok for now, but
-     * could probably be cleaned up.
-     *
-     * We allow ghbtns.com to show the "Github stars" widget.
-     * We allow avatars.githubusercontent.com and api.github.com for the Ajax
-     * table example.
-     *
-     * We allow fast.fonts.net to load Univers fonts.
-     */
-    contentSecurityPolicy: {
-      'default-src': "'self' ghbtns.com",
-      'script-src': "'self' api.github.com",
-      'font-src': "'self' fast.fonts.net",
-      'connect-src': "'self' api.github.com",
-      'img-src': "'self' ghbtns.com avatars.githubusercontent.com",
-      'style-src': "'self' 'unsafe-inline' fast.fonts.net",
-      'media-src': "'self'",
-    }
   };
 
   if (environment === 'test') {
